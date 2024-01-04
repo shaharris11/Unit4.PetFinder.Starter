@@ -9,7 +9,17 @@
 </head>
 <body>
     <h1>Pet Finder</h1>
-    
+    <form action="/api/v1/pets/">
+        <label for="pets">Pets</label>
+        <select id="name" name="name">
+            <option value="" disabled selected></option>
+            <option value="Fido">Fido</option>
+            <option vaule="Spot">Spot</option>
+            <option value="Rover">Rover</option>
+        </select>
+        <input type="submit" value="submit" />
+
+    </form>
     <script src="script.js"></script>
 </body>
 </html>
