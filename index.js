@@ -10,7 +10,7 @@ const PORT = 8080;
 // GET - / - returns homepage
 app.get('/', (req, res) => {
     // serve up the public folder as static index.html file
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/public/index.html')
 
 });
 
@@ -32,7 +32,7 @@ app.get('/api/v1/pets/owner', (req, res) => {
     const petOwner = req.query.owner
 
     // find the pet in the pets array
-    const pet = pets.find(pet => pet.owner === petOwner);
+    const pet = pets.filter(pet => pet.owner === petOwner);
 
     // send the pet as a response
     res.send(`The Owner: ${petOwner} The pet:${pet}`)
